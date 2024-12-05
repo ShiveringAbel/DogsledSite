@@ -15,6 +15,7 @@ const reader = document.getElementById("e-reader");
 const jButton = document.getElementById("jump");
 const jCheck = document.getElementById("autoJumpCheckB");
 const contButton = document.getElementById("pickUpButton");
+const resetButton = document.getElementById("resetButton");
 
     // the innerHTML of these elements will be edited
 const progress_display = document.getElementById("progress");
@@ -125,6 +126,16 @@ jButton.onclick = function() { // jumps to last saved position when button is cl
 contButton.onclick = function() {
     var new_url = url.replace(current_chapter, last_chapter)
     window.location.href = new_url
+}
+
+resetButton.onclick = function() {
+    const numChapters = 5;
+    for (let i = 1; i <= numChapters; i++) {
+        var temp_cookie = "scrollpos_ch" + i
+        localStorage.removeItem(temp_cookie)
+    }
+    localStorage.removeItem("latestChapter")
+    reader.scrollTo(0, 0);
 }
 
 window.onbeforeunload = function(e) { // saves current position & autojump toggle to cookies before leaving page
