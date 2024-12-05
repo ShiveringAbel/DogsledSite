@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dogsled</title>
+    <script type="module" crossorigin src="scrollJump.js"></script>
+    <script type="module" crossorigin src="accessibilityModal.js"></script>
+    <script type="module" crossorigin src="snowfall.js"></script>
+    <!--style sheets-->
+    <link href="basicstyle.css" rel="stylesheet" type="text/css" media="all">
+    <link href="chapter-formatting.css" rel="stylesheet" type="text/css" media="all">
+    <!--import Spectral font from google fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Spectral' rel='stylesheet'>
+
+    <!-- handles scripts that modify document -->
+    <script type="module">
+        import { importChapterText } from "./scrollJump.js";
+        import { scrollJump_main } from "./scrollJump.js";
+        import { letItSnow } from "./snowfall.js";
+    
+    importChapterText().then( // returns promise & executes value code AFTER fetching text
+        function(value) {
+            console.log("chapter imported successfully")
+                letItSnow(); // executes snow-related scripts
+                scrollJump_main(); // executes jump-related scripts
+        },
+        function(error) {
+            console.log("error importing chapter")
+        }
+    )
+    </script>
+    <!-- * *   * * -->
+    
+    </head>
+<body>
+
+    <!-- options menu popup -->
+    <div id="modal" class="modal">
+        <div id="modal-content">
+            <div id="fontBox">
+                <span id="close" class="close">&times;</span>
+                <h2>Change Font Size</h2>
+                <div class="slidecontainer">
+                    <input type="range" min="100" max="200" value="100" class="slider" id="fontSlider">
+                </div>
+                <h5 id="rangeOutput">_</h5>
+                <br>
+                <button id="apply">Apply</button>
+            </div>
+            <div id="exampleP">
+                <h3>Example Paragraph</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam posuere volutpat lorem, sed cursus risus dignissim et. Donec euismod eros in consectetur ultrices. Fusce sit amet enim commodo nunc vehicula condimentum sit amet et dui. Aliquam venenatis ipsum non enim ultrices, non sollicitudin nunc rutrum. Quisque pulvinar quis metus quis ultrices. Vivamus mollis eros est, sit amet imperdiet dui luctus vel. Mauris vestibulum lorem non magna pellentesque consectetur. Quisque luctus, augue in viverra facilisis, metus mauris semper ligula, quis convallis leo sem malesuada lectus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed sed luctus lacus. </p>
+            </div>
+            <!--jump debugging display-->
+            <div id="jump-box">
+                <h2>chapter progress</h2>
+                <div id="jump-controls">
+                    <div style="width: 200px;">
+                        <div>last saved position: <span id="progress">0%</span></div>
+                        <div>current position: <span id="current-progress">0%</span></div>
+                    </div>
+                    <div style="text-align: right;">
+                        <button id="jump" title="jump to your place in this chapter!&#13;position is saved when page is unloaded">jump to saved position</button>
+                        <div title="uncheck this box to disable automatic scrolling on page load&#13;(automatically enabled)">
+                            <span>enable autojump:</span>
+                            <input type="checkbox" id="autoJumpCheckB" name="autoJumpCheckB" value="autoJumpCheckB">
+                        </div>
+                    </div>
+                </div>
+                <span id="jump_debug"></span>
+            </div>
+            <!--jdd-->
+        </div>
+    </div>
+    <!--omp-->
+
+    <div id="nav-box">
+        <div id="navbar">
+            <h2> Navigation Bar </h2>
+            <button id="pickUpButton" title="redirects to the last visited chapter">Continue from chapter <span id="pickUpSpan"></span></button>
+            <ul>
+                <li><a href=ch1.html>The Key</li>
+                <li><a href=ch2.html>The Vampire</a></li>
+                <li><a href=ch3.html>The Tape</a></li>
+                <li><a href=ch4.html>The Sphinx</a></li>
+                <li><a href=ch5.html>The Star</a></li>
+            </ul>
+        </div>
+
+        <div id="playlists">
+            <h2>Playlists</h2>
+            <ul>
+                <li><iframe style="border-radius:12px" class="spotify" src="https://open.spotify.com/embed/playlist/7nAm17qNJazLagktUiTEmy?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></li>
+                <li><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/38zTa5yXKKHG461o26vNQm?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <li><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7hZYAaW4Sof1lgPkc94sog?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></li>
+            </ul>
+        </div>
+    </div>
+    <div id="main-box">
+        <div id="header">
+            <!-- header buttons -->
+            <div id="buttonBox">
+                <button>button</button>
+                <button>button</button>
+                <button>button</button>
+            </div>
+            <!-- hb -->
+            <!-- title hieroglyphs -->
+            <div id="titleBox">
+                <hr class="buffer">
+                <a href="https://freezerprince.tumblr.com/tagged/dogsled" style="text-decoration: none" id="heiroglyphs"><h1>𓃡𓃡𓍃</h1></a>
+                <hr class="buffer">
+            </div>
+            <!-- th -->
+            <!-- hamburger menu -->
+            <a href="#" style="text-decoration: none"><h2 id="menu">&#9776;</h2></a>
+            <!-- hm -->
+        </div>
+        <div id="reader-box">
+            <div id="e-reader">
+                <p id="TextGoesHere"></p>
+            </div>
+
+            <div id="footer">
+                <a href="ch1.html"><button><<</button></a>
+                <a href="ch2.html"><button><</button></a>
+                <h4>Chapter 3: The Tape</h4>
+                <a href="ch4.html"><button>></button></a>
+                <a href="ch5.html"><button>>></button></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="initial-snow">
+        <!--javascript generates snowflakes here-->
+    </div>
+</body>
+</html>

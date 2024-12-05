@@ -1,0 +1,313 @@
+/* * basic element stylings * */
+/* * text styles used throughout the page * */
+
+
+body {
+    /*background and text colors*/
+    background-color: black;
+    color: rgb(173, 216, 230);
+    display: flex;
+    max-height: 97dvh;
+    font-family: Garamond, serif;
+}
+
+h1 {
+    /*largest header font*/
+    font-size: 300%;
+}
+
+h2 {
+    /*2nd largest header font*/
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    background-color: transparent;
+    color: lightcyan;
+    border-color: lightgray;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+a { 
+    /* link colors */
+    color: white;
+}
+
+
+
+/* * page elements from left to right;top to bottom * */
+/* * indentation signifies element relationships for readibility * */
+/* * aka elements which are inside other elements * */
+
+
+#nav-box {
+    /* flexbox containing navbar & playlists */
+    display: flex;
+    min-width: 15vw;
+    max-width: 25%;
+    flex-direction: column;
+    gap: 20px;
+    max-height: 100dvh;
+}
+        #navbar, #playlists {
+            /*navigation bar & playlists*/
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            padding-top: 0;
+            border: 1px solid white;
+            box-sizing: border-box;
+        }
+        #playlists {
+            /* playlist box sizing */
+            height: 100%;
+            overflow: auto;
+        }
+                #navbar ul {
+                    /* chapter list styling */
+                    list-style-type: upper-roman;
+                }
+                #playlists ul {
+                    /* playlist list styling */
+                    /* (removes bullet points from playlist list) */
+                    list-style-type: none;
+                    padding-left: 0;
+                }
+
+
+#main-box{
+    /* flexbox containing header & e-reader */
+    display: flex;
+    flex-direction: column;
+    max-height: 100dvh;
+    flex: 1;
+}
+
+#header {
+    /* buttons + title + menu */
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0 20px 10px;
+    border-bottom: 1px solid white;
+
+        #titleBox {
+            display: flex;
+            
+                h1 {
+                    margin: -1rem 0 -0.15em;
+                }
+    }
+        #menu {
+            margin: 0 0 -0.15em;
+        }
+}
+        #buttonBox{
+            /* flexbox containing buttons in header */
+            display: flex;
+            gap: 5%;
+        }
+
+        .buffer{
+            /* empty elements that surround the title */
+            /* invisible on larger screens, used to adjust layout on mobile */
+            border: none;
+        }
+
+
+#reader-box {
+    /* box containing e-reader & chapter navigation */
+    overflow: auto;
+    background-color: black;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+        #e-reader {
+            /* contains chapter text */
+            overflow: auto;
+            padding: 15px;
+            box-sizing: border-box;
+            font-size: 100%;
+            text-indent: 20px;
+            flex: 1;
+        }
+
+        #footer {
+            /* chapter navigation */
+            width: 50%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            text-align: center;
+            
+                button {
+                    /* individual button styling */
+                    /* nested inside footer, doesnt affect other buttons */
+                    border: none;
+                    padding: 10px;
+                }
+        }
+        #footer button{
+            flex-shrink: 2;
+        }
+                #jump-controls{
+                    display: flex;
+                    justify-content: center;
+                }
+
+
+
+
+/* * font size popup * */
+
+
+
+ .modal {
+    /* semi-transparent background */
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+   }
+
+
+#modal-content {
+    /* popup Content */
+    display:flex;
+    flex-direction: column;
+    background-color: black;
+    margin: auto;
+    padding: 1px 12px 5px;
+    border: 1px solid #888;
+    width: auto;
+    align-items: center;
+  }
+        #fontBox{
+            /* box containing top half of popup (slider area)*/
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding-bottom: 15px;
+            
+                }
+                .close{
+                    /* button that closes the popup */
+                    font-size: 200%;
+                    color: white;
+                    position: absolute;
+                    right: 0;
+                }
+                #rangeOutput{
+                    /* text that outputs the current font size */
+                    margin: 0;
+                    color: white
+                }
+
+        #exampleP {
+            /* example paragraph styling */
+            max-width: min(60vw, 500px);
+            max-height: 30dvh;
+            overflow: auto;
+            text-indent: 20px;
+            border-bottom: 1px dashed white;
+        }
+        #jump-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+
+
+/* * mobile formatting * */
+
+
+@media only screen and (max-width: 800px) {
+
+    #nav-box {
+        /* hides sidebars */
+        display: none;
+    }
+
+    #header{
+        /* box containing buttons + title + menu */
+        /* flexbox wraps onto new line at end of screen */
+        flex-wrap:wrap;
+        padding: 0 20px 5px;
+    }
+            .button {
+                /* constrains buttons to small size */
+                min-width: 8vw;
+                padding: 5px 10px;
+            }
+            #titleBox{
+                /* sends title to new line created by wrapped header */
+                /* utilizes empty buffers to center itself on the newline */
+                margin: 1rem 0 0.15em;
+                order:4;
+                width: 100%;
+                        h1{
+                            font-size: 4vh;
+                        }
+            }
+
+    #footer{
+        /* makes chapter navigation footer a little wider */
+        width: 75%;
+    }
+}
+
+
+
+/* * * snow * * */
+
+
+#initial-snow {
+    /* positioning the snowflake html elements */
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+    z-index: -1;
+}
+
+#initial-snow > * {
+    /* some snowflake styling */
+	font-size: 10px;
+	color: white;
+	position: absolute;
+	top: -5dvh;
+}
+
+@keyframes snowfall {
+    /* snowflake animation */
+    /* heavily reliant on javascript to inject generated CSS into each individual snowflake after page loads */
+	from {
+        /* starts at the top of the page, randomly generates an x value for the snowflakes horizontal start position */
+		transform: translate3d(var(--left-start), -1em, 0); 
+	}
+	to {
+        /* generates a random x value for the horizontal end position, drifts to new position at bottom */
+		transform: translate3d(var(--left-end), 110dvh, 0);
+	}
+}

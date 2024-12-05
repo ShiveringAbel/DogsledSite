@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dogsled</title>
+    <script type="module" crossorigin src="index.js"></script>
+    <script type="module" crossorigin src="snowfall.js"></script>
+
+    <!-- handles scripts that occur on page load -->
+    <script type="module">
+        import { crown_main } from "./index.js"
+
+        window.onload = function() {
+            crown_main();
+        }
+    </script>
+    <!-- * *   * * -->
+
+    <link href="basicstyle.css" rel="stylesheet" type="text/css" media="all">
+    <style>
+        body {
+            display: flex;
+            height: 99vh;
+            width: 99vw;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .hidden {
+            display: none;
+        }
+        .visible {
+            display: block;
+        }
+        #crown, #snow {
+            z-index: 2;
+        }
+        a:visited {
+            color: rgb(210, 226, 231);
+        }
+    </style>
+</head>
+<body>
+    <!--https://www.deviantart.com/crystalcrowned/art/Crown-Pixel-Peach-828731448-->
+    <!--edit the pixel later to make the gems red LOL-->
+    Make the fatal mistake?
+    <div id="crown" class="visible">
+        <h2>
+            <a href=#>
+                <img src="images\crown.png">
+            </a>
+        </h2>
+    </div>
+    
+    <div id="snow" class="hidden">
+        <h2>
+            <a href="ch1.html">u fucked up</a>
+        </h2>
+    </div>
+    
+    <div id="initial-snow">
+        <!--javascript generates snowflakes here-->
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+/* * chapter text styling * */
+/* CSS TUTORIAL: https://www.w3schools.com/css/default.asp */
+/* CSS PROPERTIES COMPENDIUM: https://www.w3schools.com/cssref/index.php */
+
+#e-reader { /* constrains all formatting to elements within the e-reader element */
+    /* make sure that everything is inside this section */
+    font-family: 'Spectral', Georgia, serif;
+    /* prioritizes Spectral font; Georgia and Serif are websafe fallbacks */
+
+    h3{ /* styles chapter titles */
+        /* removes bold effect */
+        font-weight: normal;
+    }
+    ul{ /* styles lists within text */
+        /* (replaces bullet points with star symbol) */
+        list-style-type: '\0027E1';
+        text-indent: 0;
+    }
+    li{ /* individual list item styling */
+        /* (addes space between list elements & bullet points) */
+        padding-left: 0.5em;
+    }
+    .star-divider { /* styles dividers with class 'star-divider' */
+        /* adds top + bottom margin */
+        margin: 2.5em 0;
+        /* em = size unit relative to font size */
+    }
+
+    /* add more stuff here ! */
+
+}
