@@ -70,7 +70,7 @@ if (autoJumpToggle !== null){ // validates that cookie exists * *
     }
 
 export async function importChapterText(){
-    let file = ("chapters\\" + current_chapter + "-formatted.txt")
+    let file = ("chapters\\" + current_chapter + "-formatted.html")
     const response = await fetch (file) // fetches text * *
     .then(x => x.text()) // reads the text * *
     .then(y => document.getElementById("TextGoesHere").innerHTML = y); // replaces e-reader innerHTML w/ chapter text * *

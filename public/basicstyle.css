@@ -282,6 +282,7 @@ a {
 
 #initial-snow {
     /* positioning the snowflake html elements */
+    font-family: 'Times New Roman', serif;
 	position: absolute;
 	top: 0;
 	left: 0;
