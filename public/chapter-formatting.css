@@ -6,6 +6,9 @@
     /* make sure that everything is inside this section */
     font-family: 'Spectral', Georgia, serif;
     /* prioritizes Spectral font; Georgia and Serif are websafe fallbacks */
+    i{ 
+        font-style: italic;
+    }
 
     h3{ /* styles chapter titles */
         /* removes bold effect */
