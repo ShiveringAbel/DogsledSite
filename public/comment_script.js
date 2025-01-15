@@ -1,13 +1,7 @@
 
-/*
-export async function IMPORT_COMMENTS(){
-    let file = filename
-    const response = await fetch (file) // fetches text * *
-    .then(x => x.text()) // reads the text * *
-    .then(y => document.getElementById("TextGoesHere").innerHTML = y); // replaces e-reader innerHTML w/ chapter text * *
-    return Promise.resolve(response); // returns AFTER text is fetched & innerHTML is replaced* *
-}
-    */
+
+const API_LINK = 'https://sheetdb.io/api/v1/pzgyz1ngukw5u';
+// please make sure that this link is the same as the linked action in comments.html !!
 
 var bugForm = document.getElementById("comment_box");
 bugForm.addEventListener("submit", (e) => {
@@ -31,7 +25,7 @@ const MSGBOARD = document.getElementById("messageboard_test");
 let pArr = [];
 let textArr = [];
 
-fetch('https://sheetdb.io/api/v1/cgjxlxoou3fl5?sort_by=date&sort_order=desc')
+fetch(API_LINK + '?sort_by=date&sort_order=desc')
   .then((response) => response.json())
   .then((data) => {sheetArray = data; loadMessages(sheetArray)});
 
