@@ -3,10 +3,15 @@ body {
     padding: 20px;
 }
 
+#error_msg {
+    color: white;
+    display: none;
+    font-size: 150%;
+}
+
 .messageboard {
-    span.splash{
+    .splash{
         color:#add8e6;
-        text-align: right;
     }
 }
 

@@ -36,6 +36,10 @@ fetch('https://sheetdb.io/api/v1/cgjxlxoou3fl5?sort_by=date&sort_order=desc')
   .then((data) => {sheetArray = data; loadMessages(sheetArray)});
 
 function loadMessages(data) {
+    if ('error' in data) {
+        displayError()
+    }
+    else {
     for (let i = 0; i< data.length; i++) {
         let tempObj = data[i];
         let C_DATE = tempObj.date;
@@ -57,6 +61,10 @@ function loadMessages(data) {
         `
         pArr[i].appendChild(textArr[i])
         MSGBOARD.appendChild(pArr[i])
-    }
+    }}
     
+}
+
+function displayError() {
+    document.getElementById("error_msg").style = "display: block;"
 }
