@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dogsled</title>
+    <link href="comment_style.css" rel="stylesheet" type="text/css" media="all">
+    <script type="module" crossorigin src="comment_script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            // Function to add a leading zero to single digit numbers
+            function addLeadingZero(number) {
+                return (number < 10 ? '0' : '') + number;
+            }
+    
+            // Get the current date and time
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = addLeadingZero(now.getMonth() + 1); // Months are zero-indexed
+            const day = addLeadingZero(now.getDate());
+            const hours = addLeadingZero(now.getHours());
+            const minutes = addLeadingZero(now.getMinutes());
+    
+            // Format the datetime string in the format required by datetime-local input
+            const currentDatetime = `${year}-${month}-${day}T${hours}:${minutes}`;
+    
+            // Set the value of the datetime-local input to the current date and time
+            document.getElementById('datetime').value = currentDatetime;
+        });
+    </script>
+    
+  </head>
+  <body>
+
+<!-- * * comment submission stuff * * -->
+    <div class="comment_form">
+        <div>
+            <div class="comment_box_header"><span>Comment!</span></div>
+            <div class="comment_box_inputs">
+            <form  id="comment_box" action="https://sheetdb.io/api/v1/cgjxlxoou3fl5" method="post">
+                <div class="datetime">
+                    <label for="datetime">Date:</label>
+                    <input type="datetime-local" id="datetime" name="date" readonly="readonly">
+                </div>
+                <div class="name_input">
+                    <label for="Cname">Display Name:</label>
+                    <input type="text" id="Cname" name="displayName">
+                </div>
+                <div class="message_input">
+                    <textarea name="messageBody" form="comment_box"></textarea>
+                </div>
+                <input type="submit">
+            </form>
+            </div>
+        </div>
+    </div>
+<!-- * * to close submissions, comment out that entire bit of code * * -->
+
+    <br>
+    <div class="messageboard">
+        <span class="splash">refresh to see your message!</span>
+        <div id="messageboard_test"></div>
+    </div>
+    
+  </body>
+</html>
