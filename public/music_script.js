@@ -20,6 +20,7 @@ let playlist_name = "DOGSLED";
 let track_index = 0;
 let isPlaying = false;
 let updateTimer;
+let track_list;
 
 // Create new audio element
 let curr_track = document.createElement('audio');
@@ -28,6 +29,24 @@ let curr_track = document.createElement('audio');
 let wk_cover = "/images/playlist_wk.jpg";
 let betty_cover = "/images/playlist_betty.jpg"
 let full_cover ="images/playlist_full.jpg"
+
+
+window.addEventListener("beforeunload", function() {
+  sessionStorage.setItem("playlist_name", playlist_name)
+  sessionStorage.setItem("track_index", track_index)
+  sessionStorage.setItem("current_time", curr_track.currentTime)
+  sessionStorage.setItem("current_vol", curr_track.volume)
+  console.log("unloading playlist: " + playlist_name)
+  console.log("unloading track: " + track_index)
+  console.log("unloading track time: " + curr_track.currentTime)
+  console.log("unloading track vol: " + curr_track.volume)
+})
+
+
+let sessionPlaylist = sessionStorage.getItem("playlist_name")
+let sessionTrack = sessionStorage.getItem("track_index")
+let sessionTime = sessionStorage.getItem("current_time")
+let sessionVol = sessionStorage.getItem("current_vol")
 
 let placeholder = [
   {
@@ -115,7 +134,7 @@ let DOGSLED = [
     path: "music/dogsled/Kittie - Brackish.mp3"
   },
   {
-    name: "Change (In the House of Flies",
+    name: "Change (In the House of Flies)",
     artist: "Deftones",
     image: dogsled_cover,
     path: "music/dogsled/Deftones - Change (In the House of Flies).mp3"
@@ -224,43 +243,34 @@ let DOGSLED = [
   },
 ]
 
-let track_list = DOGSLED
-
 //playlist stuff
 let dogs = document.getElementById("Dogsled")
 let enkr = document.getElementById("ENKRATEIA")
 let coma = document.getElementById("COMA")
 
+function setPlaylist(list_name) {
+  playlist_name = list_name;
+  if (list_name == "DOGSLED") {
+    track_list = DOGSLED;
+    loadPlaylist();
+  } else {
+    track_list = placeholder;
+    loadPlaylist();
+  }
+  track_index = 0;
+  loadTrack(track_index);
+}
+
 dogs.onclick = function() {
-  playlist_name = "DOGSLED";
-  track_list = DOGSLED
-  loadTrack(0);
+  setPlaylist("DOGSLED");
 }
 enkr.onclick = function() {
-  playlist_name = "ENKRATEIA"
-  track_list = placeholder
-  loadTrack(0);
+  setPlaylist("ENRATEIA");
 }
 coma.onclick = function() {
-  playlist_name = "COMA"
-  track_list = placeholder
-  loadTrack(0);
+  setPlaylist("COMA");
 }
 //playlist stuff
-
-function random_bg_color() {
-
-  // Get a number between 64 to 256 (for getting lighter colors)
-  let red = Math.floor(Math.random() * 256) + 64;
-  let green = Math.floor(Math.random() * 256) + 64;
-  let blue = Math.floor(Math.random() * 256) + 64;
-
-  // Construct a color withe the given values
-  let bgColor = "rgb(" + red + "," + green + "," + blue + ")";
-
-  // Set the background to that color
-  document.body.style.background = bgColor;
-}
 
 function loadTrack(track_index) {
   clearInterval(updateTimer);
@@ -280,7 +290,15 @@ function loadTrack(track_index) {
   updatePlaylist();
 }
 
+function resetPlaylist() {
+  for (let i = 0; i < liArray.length; i++) {
+    liNodeArray[i].remove();
+    liArray[i].remove();
+  }
+}
+
 function loadPlaylist() {
+  resetPlaylist();
   for (let i = 0; i < track_list.length; i++) {
     liArray[i] = document.createElement("li");
     playlist.appendChild(liArray[i]);
@@ -290,8 +308,10 @@ function loadPlaylist() {
     liArray[i].onclick = function() {
       track_index = i;
       loadTrack(track_index);
+      playTrack();
     }
   }
+  updatePlaylist();
 }
 
 function updatePlaylist() {
@@ -309,10 +329,6 @@ function resetValues() {
   total_duration.textContent = "00:00";
   seek_slider.value = 0;
 }
-
-// Load the first track in the tracklist
-loadPlaylist();
-loadTrack(track_index);
 
 function playpauseTrack() {
   if (!isPlaying) playTrack();
@@ -379,4 +395,28 @@ function seekUpdate() {
   }
 }
 
+function loadSession() {
+  setPlaylist(sessionPlaylist);
+  loadPlaylist();
+  track_index = Number(sessionTrack);
+  loadTrack(track_index);
+  curr_track.currentTime = sessionTime
+  curr_track.volume = sessionVol
+  volume_slider.value = sessionVol * 100;
+  playTrack();
+}
 
+// Load the first track in the tracklist
+
+track_list = DOGSLED;
+if (sessionTrack !== null){
+  console.log("loading playlist: " + sessionPlaylist)
+  console.log("loading track: " + sessionTrack)
+  console.log("loading track time: " + sessionTime)
+  console.log("loading track vol: " + sessionVol)
+  loadSession();
+} else {
+  setPlaylist("DOGSLED");
+  loadPlaylist();
+  loadTrack(0);
+}
