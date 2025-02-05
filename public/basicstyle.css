@@ -267,7 +267,7 @@ a {
 @media only screen and (max-width: 800px) {
 
     body {
-        max-width: 100%;
+        max-width: 100dvw;
     }
 
     #nav-box {
@@ -276,8 +276,11 @@ a {
     }
 
     #main-box {
-        max-width: 100%;
+        max-width: 100dvw;
         border: none;
+        #reader-box {
+            max-width: 100dvw;
+        }
     }
 
     #header{
