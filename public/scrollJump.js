@@ -99,7 +99,7 @@ function updateJumpDisplay() { // updates 'last saved position' display * *
     progress_display.innerHTML = (progressPercent + "%");
 }
 
-function whatChapter(search_this, numChapters) { // THIS WILL ONLY WORK IF THE URL HAS THE CHAPTER NUMBER IN IT * *
+export function whatChapter(search_this, numChapters) { // THIS WILL ONLY WORK IF THE URL HAS THE CHAPTER NUMBER IN IT * *
     for (let i = 1; i <= numChapters; i++) {
         var temp_chapter = "ch" + i // loops thru all chapter numbers * *
         if (search_this.search(temp_chapter) != -1) { // searches url for every chapter number * *

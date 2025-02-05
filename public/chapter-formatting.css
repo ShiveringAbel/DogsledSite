@@ -13,6 +13,7 @@
     h3{ /* styles chapter titles */
         /* removes bold effect */
         font-weight: normal;
+        text-align: center;
     }
     ul{ /* styles lists within text */
         /* (replaces bullet points with star symbol) */
@@ -29,6 +30,13 @@
         /* em = size unit relative to font size */
     }
 
+    #art {
+        display: flex;
+        justify-content: center;
+        img {
+            max-width: 100%;
+        }
+    }
     /* add more stuff here ! */
 
 }
