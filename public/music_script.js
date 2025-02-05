@@ -27,6 +27,7 @@ let curr_track = document.createElement('audio');
 // Define the tracks that have to be played
 let wk_cover = "/images/playlist_wk.jpg";
 let betty_cover = "/images/playlist_betty.jpg"
+let full_cover ="images/playlist_full.jpg"
 
 let placeholder = [
   {
@@ -91,7 +92,139 @@ let placeholder = [
   },
 ];
 
-let track_list = placeholder
+//easily switch out cover art
+let dogsled_cover = full_cover;
+
+let DOGSLED = [
+  {
+    name: "Wallflower",
+    artist: "Switchblade Symphony",
+    image: dogsled_cover,
+    path: "music/dogsled/Switchblade Symphony - Wallflower.mp3"
+  },
+  {
+    name: "Do You Love Me?",
+    artist: "Nick Cave & The Bad Seeds",
+    image: dogsled_cover,
+    path: "music/dogsled/Nick Cave and the Bad Seeds - Do You Love Me.mp3"
+  },
+  {
+    name: "Brackish",
+    artist: "Kittie",
+    image: dogsled_cover,
+    path: "music/dogsled/Kittie - Brackish.mp3"
+  },
+  {
+    name: "Change (In the House of Flies",
+    artist: "Deftones",
+    image: dogsled_cover,
+    path: "music/dogsled/Deftones - Change (In the House of Flies).mp3"
+  },
+  {
+    name: "The Noose",
+    artist: "A Perfect Circle",
+    image: dogsled_cover,
+    path: "music/dogsled/A Perfect Circle - The Noose.mp3"
+  },
+  {
+    name: "Broken Record",
+    artist: "Scarling.",
+    image: dogsled_cover,
+    path: "music/dogsled/Scarling. - Broken Record.mp3"
+  },
+  {
+    name: "Our Ride to the Rectory",
+    artist: "Team Sleep",
+    image: dogsled_cover,
+    path: "music/dogsled/Team Sleep - Our Ride to the Rectory.mp3"
+  },
+  {
+    name: "My Iron Lung",
+    artist: "Radiohead",
+    image: dogsled_cover,
+    path: "music/dogsled/Radiohead - My Iron Lung.mp3"
+  },
+  {
+    name: "Something I Can Never Have",
+    artist: "Nine Inch Nails",
+    image: dogsled_cover,
+    path: "music/dogsled/Nine Inch Nails - Something I Can Never Have.mp3"
+  },
+  {
+    name: "Paperdoll",
+    artist: "Kittie",
+    image: dogsled_cover,
+    path: "music/dogsled/Kittie - Paperdoll.mp3"
+  },
+  {
+    name: "Bloody Murderer",
+    artist: "Cursive",
+    image: dogsled_cover,
+    path: "music/dogsled/Cursive - Bloody Murderer.mp3"
+  },
+  {
+    name: "White Shadow Waltz",
+    artist: "Okkervil River",
+    image: dogsled_cover,
+    path: "music/dogsled/Okkervil River - White Shadow Waltz.mp3"
+  },
+  {
+    name: "Blue",
+    artist: "A Perfect Circle",
+    image: dogsled_cover,
+    path: "music/dogsled/A Perfect Circle - Blue.mp3"
+  },
+  {
+    name: "Anniversary of an Uninteresting Event",
+    artist: "Deftones",
+    image: dogsled_cover,
+    path: "music/dogsled/Deftones - Anniversary of an Uninteresting Event.mp3"
+  },
+  {
+    name: "Border Factory",
+    artist: "Xiu Xiu",
+    image: dogsled_cover,
+    path: "music/dogsled/Xiu Xiu - Border Factory.mp3"
+  },
+  {
+    name: "Dracula Parrot, Moon Moth",
+    artist: "Xiu Xiu",
+    image: dogsled_cover,
+    path: "music/dogsled/Xiu Xiu - Dracula Parrot, Moon Moth.mp3"
+  },
+  {
+    name: "Forever Night Castle of Love",
+    artist: "Kekht Arakh",
+    image: dogsled_cover,
+    path: "music/dogsled/Këkht Aräkh - Forever Night Castle of Love.mp3"
+  },
+  {
+    name: "Palace",
+    artist: "The Antlers",
+    image: dogsled_cover,
+    path: "music/dogsled/The Antlers - Palace.mp3"
+  },
+  {
+    name: "Another Version Of The Truth",
+    artist: "Nine Inch Nails",
+    image: dogsled_cover,
+    path: "music/dogsled/Nine Inch Nails - Another Version Of The Truth.mp3"
+  },
+  {
+    name: "And No More Shall We Part",
+    artist: "Nick Cave & The Bad Seeds",
+    image: dogsled_cover,
+    path: "music/dogsled/Nick Cave & the Bad Seeds - And No More Shall We Part.mp3"
+  },
+  {
+    name: "Drowning Lessons",
+    artist: "My Chemical Romance",
+    image: dogsled_cover,
+    path: "music/dogsled/My Chemical Romance - Drowning Lessons.mp3"
+  },
+]
+
+let track_list = DOGSLED
 
 //playlist stuff
 let dogs = document.getElementById("Dogsled")
@@ -100,7 +233,7 @@ let coma = document.getElementById("COMA")
 
 dogs.onclick = function() {
   playlist_name = "DOGSLED";
-  track_list = placeholder
+  track_list = DOGSLED
   loadTrack(0);
 }
 enkr.onclick = function() {
