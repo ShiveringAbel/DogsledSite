@@ -3,11 +3,8 @@
 :root {
 --border_image_url: url("images\\snowflake_border_3.png");
 --border_image_slice: 35;
-background: no-repeat, center, radial-gradient(transparent, black), url("images\\bg2.jpg");
+background: no-repeat, center, radial-gradient(transparent 40%, black), url("images\\bg2.jpg");
 background-size: cover;
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
 scrollbar-color: lightblue black;
 scrollbar-width: thin;
 }
@@ -19,10 +16,9 @@ body {
     display: flex;
     justify-content: center;
     max-height: 100dvh;
-    max-width: fit-content;
-    margin: 0;
+    max-width: 990px;
+    margin: 0 auto;
     font-family: Garamond, serif;
-    z-index: 0;
 }
 
 h1 {
