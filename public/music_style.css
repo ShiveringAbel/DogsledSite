@@ -1,0 +1,145 @@
+.player {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.track-art {
+  width: 150px;
+  height: 150px;
+  background-image: url("");
+  background-size: cover;
+  border-radius: 5%;
+  margin: 0.5rem;
+}
+
+.now-playing {
+  font-size: 0.8rem;
+}
+
+.track-name {
+  font-size: 1.5rem;
+}
+
+.track-artist {
+  font-size: 1rem;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 0.5rem;
+}
+
+.playpause-track, .prev-track, .next-track {
+  padding: 0.5rem;
+  opacity: 0.8;
+
+  /* Smoothly transition the opacity */
+  transition: opacity .2s;
+}
+
+.playpause-track:hover, .prev-track:hover, .next-track:hover {
+  opacity: 1.0;
+}
+
+.slider_container {
+  width: 75%;
+  max-width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modify the appearance of the slider */
+.seek_slider, .volume_slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 5px;
+  background: lightblue;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+/* Modify the appearance of the slider thumb */
+.seek_slider::-webkit-slider-thumb, .volume_slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: white;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.seek_slider:hover, .volume_slider:hover {
+  opacity: 1.0;
+}
+
+.seek_slider {
+  width: 60%;
+}
+
+.volume_slider {
+  width: 30%;
+}
+
+.current-time, .total-duration {
+  padding: 2px;
+}
+
+i.fa-volume-down, i.fa-volume-up {
+  padding: 2px;
+}
+
+i.fa-play-circle, i.fa-pause-circle, i.fa-step-forward, i.fa-step-backward {
+  cursor: pointer;
+}
+
+.playlist {
+  overflow: auto;
+  padding-right: 1rem;
+  li {
+    cursor: pointer;
+    margin: 1rem 0;
+    opacity: 1.0;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  li:hover {
+    opacity: 0.7;
+  }
+}
+
+.list_select {
+  display: flex;
+  gap: 0.2rem;
+  color: white;
+  div {
+    cursor: pointer;
+    opacity: 1.0;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  div:hover {
+    opacity: 0.7;
+  }
+}
+.dashed{
+  width: 90%;
+  border-style: dashed;
+  color: white;
+}

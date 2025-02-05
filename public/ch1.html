@@ -10,8 +10,11 @@
     <!--style sheets-->
     <link href="basicstyle.css" rel="stylesheet" type="text/css" media="all">
     <link href="chapter-formatting.css" rel="stylesheet" type="text/css" media="all">
+    <link href="\music_style.css" rel="stylesheet" type="text/css" media="all">
     <!--import Spectral font from google fonts-->
     <link href='https://fonts.googleapis.com/css?family=Spectral' rel='stylesheet'>
+    <!-- Load FontAwesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
     <!-- handles scripts that modify document -->
     <script type="module">
@@ -92,11 +95,44 @@
 
         <div id="playlists">
             <h2>Playlists</h2>
-            <ul>
-                <li><iframe style="border-radius:12px" class="spotify" src="https://open.spotify.com/embed/playlist/7nAm17qNJazLagktUiTEmy?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></li>
-                <li><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/38zTa5yXKKHG461o26vNQm?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                <li><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7hZYAaW4Sof1lgPkc94sog?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></li>
-            </ul>
+        <div class="list_select" title="PLAYLISTS ARE STILL WIP;&#13;NICK CAVE BE UPON YE">
+            <div id="Dogsled">DOGSLED</div>
+            -
+            <div id="ENKRATEIA">ENKRATEIA</div>
+            -
+            <div id="COMA">COMA</div>
+        </div>
+        <hr class="dashed">
+
+<!-- music player -->
+  <div class="player">
+    <div class="details">
+      <div class="now-playing">PLAYING x OF y</div>
+      <div class="track-art"></div>
+      <div class="track-name">Track Name</div>
+      <div class="track-artist">Track Artist</div>
+    </div>
+    <div class="buttons">
+      <div class="prev-track" onclick="prevTrack()"><i class="fa fa-step-backward fa-2x"></i></div>
+      <div class="playpause-track" onclick="playpauseTrack()"><i class="fa fa-play-circle fa-5x"></i></div>
+      <div class="next-track" onclick="nextTrack()"><i class="fa fa-step-forward fa-2x"></i></div>
+    </div>
+    <div class="slider_container">
+      <div class="current-time">00:00</div>
+      <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+      <div class="total-duration">00:00</div>
+    </div>
+    <div class="slider_container">
+      <i class="fa fa-volume-down"></i>
+      <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+      <i class="fa fa-volume-up"></i>
+    </div>
+
+      <ol class="playlist">
+      </ol>
+  </div>
+<!-- music player -->
+
         </div>
     </div>
     <div id="main-box">
@@ -138,3 +174,5 @@
     </div>
 </body>
 </html>
+
+<script src="music_script.js"></script>

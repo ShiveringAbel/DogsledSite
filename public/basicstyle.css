@@ -13,7 +13,7 @@ scrollbar-width: thin;
 
 body {
     /*background and text colors*/
-    background-color: black;
+    background-color: none;
     color: rgb(173, 216, 230);
     display: flex;
     justify-content: center;
@@ -62,11 +62,12 @@ a {
     /* flexbox containing navbar & playlists */
     flex-grow: 2;
     display: flex;
-    min-width: 15em;
-    max-width: 20em;
+    min-width: 18rem;
+    max-width: 20rem;
     flex-direction: column;
     gap: 20px;
     max-height: 100dvh;
+    justify-content: center;
 }
         #navbar, #playlists {
             /*navigation bar & playlists*/
@@ -75,15 +76,14 @@ a {
             align-items: center;
             padding: 10px;
             padding-top: 0;
-            border: 11px solid transparent;
+            border: 15px solid transparent;
             box-sizing: border-box;
-
             border-image: var(--border_image_url) var(--border_image_slice) round;
+            background-color: black;
         
         }
         #playlists {
             /* playlist box sizing */
-            height: 100%;
             overflow: auto;
         }
                 #navbar ul {
@@ -104,6 +104,10 @@ a {
     flex-direction: column;
     max-width: 40em;
     flex-shrink: 1;
+    background-color: black;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-image: var(--border_image_url) var(--border_image_slice) round;
 }
 
 #header {
@@ -112,7 +116,7 @@ a {
     align-items: flex-end;
     justify-content: space-between;
     padding: 0 20px 10px;
-    border-bottom: 30px solid transparent;
+    border-bottom: 15px solid transparent;
     border-image: var(--border_image_url) var(--border_image_slice) round;
 
 
@@ -209,7 +213,7 @@ a {
     background-color: black;
     margin: auto;
     padding: 1px 12px 5px;
-    border: 11px solid transparent;
+    border: 15px solid transparent;
     width: auto;
     align-items: center;
 
@@ -273,6 +277,7 @@ a {
 
     #main-box {
         max-width: 100%;
+        border: none;
     }
 
     #header{
