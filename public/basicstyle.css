@@ -284,8 +284,17 @@ a {
     #main-box {
         max-width: 100dvw;
         border: none;
-        #reader-box {
-            max-width: 100dvw;
+    }
+
+    
+    #e-reader {
+        /* contains chapter text */
+        overflow: auto;
+        max-width: 100dvw;
+        img {
+            width:100%;
+            max-width: 593px;
+            height: auto;
         }
     }
 
