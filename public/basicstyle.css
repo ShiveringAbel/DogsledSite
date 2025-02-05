@@ -6,6 +6,7 @@
 background: no-repeat, center, radial-gradient(transparent, black), url("images\\bg2.jpg");
 background-size: cover;
 display: flex;
+flex-wrap: wrap;
 justify-content: center;
 scrollbar-color: lightblue black;
 scrollbar-width: thin;
@@ -160,7 +161,8 @@ a {
             font-size: 100%;
             text-indent: 20px;
             img {
-                max-width: 100dvw;
+                width:100%;
+                max-width: 593px;
                 height: auto;
             }
         }
@@ -301,12 +303,12 @@ a {
             #titleBox{
                 /* sends title to new line created by wrapped header */
                 /* utilizes empty buffers to center itself on the newline */
-                margin: 1rem 0 0.15rem;
+                margin: 1em 0 0.15em;
                 order:4;
                 width: 100%;
                         h1{
                             flex-shrink: 1;
-                            font-size: 2.5rem;
+                            font-size: 2.5em;
                         }
             }
 

@@ -35,7 +35,9 @@
         justify-content: center;
         max-width: 100dvw;
         img {
-            max-width: 100%;
+            width:100%;
+            max-width: 593px;
+            height: auto;
         }
     }
     /* add more stuff here ! */
