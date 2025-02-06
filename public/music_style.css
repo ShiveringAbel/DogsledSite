@@ -3,19 +3,32 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .details {
   display: flex;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
+  text-align: center;
+}
+
+#tart-box {
+  display: flex;
+}
+
+#name-box {
+  width: 50%;
+  flex-grow: 2;;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .track-art {
-  width: 150px;
-  height: 150px;
+  height: 100px;
+  width: 100px;
   background-image: url("");
   background-size: cover;
   border-radius: 5%;
@@ -27,7 +40,8 @@
 }
 
 .track-name {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  color: #c8e5ee;
 }
 
 .track-artist {
@@ -42,15 +56,18 @@
 }
 
 .playpause-track, .prev-track, .next-track {
-  padding: 0.5rem;
-  opacity: 0.8;
+  padding: 0.25rem;
+  opacity: 1.0;
 
   /* Smoothly transition the opacity */
   transition: opacity .2s;
 }
+.playpause-track {
+  font-size: 0.35rem;
+}
 
 .playpause-track:hover, .prev-track:hover, .next-track:hover {
-  opacity: 1.0;
+  opacity: 0.7;
 }
 
 .slider_container {
@@ -68,7 +85,7 @@
   appearance: none;
   height: 5px;
   background: lightblue;
-  opacity: 0.7;
+  opacity: 1.0;
   -webkit-transition: .2s;
   transition: opacity .2s;
 }
@@ -86,7 +103,7 @@
 }
 
 .seek_slider:hover, .volume_slider:hover {
-  opacity: 1.0;
+  opacity: 0.7;
 }
 
 .seek_slider {
@@ -110,6 +127,9 @@ i.fa-play-circle, i.fa-pause-circle, i.fa-step-forward, i.fa-step-backward {
 }
 
 .playlist {
+  min-height: 6rem;
+  box-sizing: border-box;
+  flex-grow: 2;
   overflow: auto;
   padding-right: 1rem;
   li {

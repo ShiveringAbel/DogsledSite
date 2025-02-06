@@ -156,11 +156,6 @@ a {
             box-sizing: border-box;
             font-size: 100%;
             text-indent: 20px;
-            img {
-                width:100%;
-                max-width: 593px;
-                height: auto;
-            }
         }
 
         #footer {
@@ -287,11 +282,6 @@ a {
         /* contains chapter text */
         overflow: auto;
         max-width: 100dvw;
-        img {
-            width:100%;
-            max-width: 593px;
-            height: auto;
-        }
     }
 
     #header{

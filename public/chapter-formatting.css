@@ -31,12 +31,14 @@
     }
 
     #art {
-        display: flex;
-        justify-content: center;
-        max-width: 100dvw;
+        overflow: auto;
+        max-width: 610;
+        text-indent: 0;
+        text-align: center;
         img {
-            width:100%;
-            max-width: 593px;
+            margin: auto;
+            width: 100%;
+            max-width: 610px;
             height: auto;
         }
     }
