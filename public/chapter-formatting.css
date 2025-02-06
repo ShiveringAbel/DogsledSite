@@ -32,13 +32,13 @@
 
     #art {
         overflow: auto;
-        max-width: 610;
+        max-width: 610px;
         text-indent: 0;
         text-align: center;
+        margin: auto;
         img {
-            margin: auto;
-            width: 100%;
-            max-width: 610px;
+            max-width: 100%;
+            width: auto;
             height: auto;
         }
     }
