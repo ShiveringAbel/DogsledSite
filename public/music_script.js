@@ -243,6 +243,233 @@ let DOGSLED = [
   },
 ]
 
+let coma_cover = betty_cover
+
+let COMA = [
+  {
+    name: "Waterflower",
+    artist: "The Pacific Ocean",
+    image: coma_cover,
+    path: "music/Coma/The Pacific Ocean - Waterflower.mp3"
+  },
+  {
+    name: "In The Maybe World",
+    artist: "Lisa Germano",
+    image: coma_cover,
+    path: "music/Coma/Lisa Germano - In the Maybe World.mp3"
+  },
+  {
+    name: "Super Falling Star",
+    artist: "Stereolab",
+    image: coma_cover,
+    path: "music/Coma/Stereolab - Super Falling Star.mp3"
+  },
+  {
+    name: "Cold Fish",
+    artist: "Queenadreena",
+    image: coma_cover,
+    path: "music/Coma/QueenAdreena - Cold Fish.mp3"
+  },
+  {
+    name: "Ego Maniac Kid",
+    artist: "Blonde Redhead",
+    image: coma_cover,
+    path: "music/Coma/Blonde Redhead - Ego Maniac Kid.mp3"
+  },
+  {
+    name: "Dancing",
+    artist: "Katie Dey",
+    image: coma_cover,
+    path: "music/Coma/Katie Dey - Dancing.mp3"
+  },
+  {
+    name: "Child I Will Hurt You",
+    artist: "Crystal Castles",
+    image: coma_cover,
+    path: "music/Coma/Crystal Castles - Child I Will Hurt You.mp3"
+  },
+  {
+    name: "Girl Anachronism",
+    artist: "The Dresden Dolls",
+    image: coma_cover,
+    path: "music/Coma/The Dresden Dolls - Girl Anachronism.mp3"
+  },
+  {
+    name: "Wax And Wane - Remixed",
+    artist: "Cocteau Twins",
+    image: coma_cover,
+    path: "music/Coma/Cocteau Twins - Wax And Wane (Remixed).mp3"
+  },
+  {
+    name: "Supervixen",
+    artist: "Garbage",
+    image: coma_cover,
+    path: "music/Coma/Garbage - Supervixen.mp3"
+  },
+  {
+    name: "The Invisible Man",
+    artist: "Lush",
+    image: coma_cover,
+    path: "music/Coma/Lush - The Invisible Man.mp3"
+  },
+  {
+    name: "Dogs In A Cage",
+    artist: "Angelfish",
+    image: coma_cover,
+    path: "music/Coma/Angelfish - Dogs In A Cage.mp3"
+  },
+  {
+    name: "Brena",
+    artist: "A Perfect Circle",
+    image: coma_cover,
+    path: "music/Coma/A Perfect Circle - Breña.mp3"
+  },
+  {
+    name: "Simon's Sleeping",
+    artist: "Pretty Balanced",
+    image: coma_cover,
+    path: "music/Coma/Pretty Balanced - Simon's Sleeping.mp3"
+  },
+  {
+    name: "Hidden Place",
+    artist: "Bjork",
+    image: coma_cover,
+    path: "music/Coma/Björk - Hidden Place.mp3"
+  },
+  {
+    name: "Maybae Baeby",
+    artist: "Xiu Xiu",
+    image: coma_cover,
+    path: "music/Coma/Xiu Xiu - Maybae Baeby.mp3"
+  },
+  {
+    name: "Shadow of a Doubt",
+    artist: "Sonic Youth",
+    image: coma_cover,
+    path: "music/Coma/Sonic Youth - Shadow of a Doubt.mp3"
+  },
+  {
+    name: "Girl Lunar Explorer",
+    artist: "Melora Creager",
+    image: coma_cover,
+    path: "music/Coma/Melora Creager - Girl Lunar Explorer.mp3"
+  },
+  {
+    name: "Run Through",
+    artist: "Denali",
+    image: coma_cover,
+    path: "music/Coma/Denali - Run Through.mp3"
+  },
+  {
+    name: "Setting Sun",
+    artist: "You'll Never Get to Heaven",
+    image: coma_cover,
+    path: "music/Coma/You'll Never Get to Heaven - Setting Sun.mp3"
+  },
+  {
+    name: "Desire Lines",
+    artist: "Lush",
+    image: coma_cover,
+    path: "music/Coma/Lush - Desire Lines.mp3"
+  },
+  {
+    name: "Please Don't Leave Me",
+    artist: "Uboa",
+    image: coma_cover,
+    path: "music/Coma/Uboa - Please Don't Leave Me.mp3"
+  },
+  {
+    name: "Under Ice",
+    artist: "Kate Bush",
+    image: coma_cover,
+    path: "music/Coma/Kate Bush - Under Ice.mp3"
+  },
+  {
+    name: "Fuzz Gong Fight",
+    artist: "Xiu Xiu",
+    image: coma_cover,
+    path: "music/Coma/Xiu Xiu - Fuzz Gong Fight.mp3"
+  },
+  {
+    name: "Baby Dracula",
+    artist: "Scarling.",
+    image: coma_cover,
+    path: "music/Coma/Scarling. - Baby Dracula.mp3"
+  },
+  {
+    name: "The Gate",
+    artist: "Bjork",
+    image: coma_cover,
+    path: "music/Coma/Björk - The Gate.mp3"
+  },
+  {
+    name: "I Am Made Of Chalk",
+    artist: "Crystal Castles",
+    image: coma_cover,
+    path: "music/Coma/Crystal Castles - I Am Made Of Chalk.mp3"
+  },
+  {
+    name: "The Frail - Remix",
+    artist: "Nine Inch Nails",
+    image: coma_cover,
+    path: "music/Coma/Nine Inch Nails - The Frail (version).mp3"
+  },
+  {
+    name: "Misspent Youth",
+    artist: "Uboa",
+    image: coma_cover,
+    path: "music/Coma/Uboa - Misspent Youth.mp3"
+  },
+  {
+    name: "Mary Of Silence",
+    artist: "Mazzy Star",
+    image: coma_cover,
+    path: "music/Coma/Mazzy Star - Mary of Silence.mp3"
+  },
+  {
+    name: "Phantom Love",
+    artist: "Lisa Germano",
+    image: coma_cover,
+    path: "music/Coma/Lisa Germano - Phantom Love.mp3"
+  },
+  {
+    name: "Joga",
+    artist: "Bjork",
+    image: coma_cover,
+    path: "music/Coma/Björk - Joga.mp3"
+  },
+  {
+    name: "The Last Man On Earth",
+    artist: "Schoolyard Heroes",
+    image: coma_cover,
+    path: "music/Coma/Schoolyard Heroes - The Last Man on Earth.mp3"
+  },
+  {
+    name: "Mossbraker",
+    artist: "Broken Social Scene",
+    image: coma_cover,
+    path: "music/Coma/Broken Social Scene - Mossbraker.mp3"
+  },
+  {
+    name: "Ice age",
+    artist: "How To Destroy Angels",
+    image: coma_cover,
+    path: "music/Coma/How to Destroy Angels - Ice Age.mp3"
+  },
+  {
+    name: "Nullaby",
+    artist: "Denali",
+    image: coma_cover,
+    path: "music/Coma/Denali - Nullaby.mp3"
+  },
+  {
+    name: "Lady In The Lake",
+    artist: "Elysian Fields",
+    image: coma_cover,
+    path: "music/Coma/Elysian Fields - Lady In The Lake.mp3"
+  },
+]
+
 //playlist stuff
 let dogs = document.getElementById("Dogsled")
 let enkr = document.getElementById("ENKRATEIA")
@@ -253,7 +480,10 @@ function setPlaylist(list_name) {
   if (list_name == "DOGSLED") {
     track_list = DOGSLED;
     loadPlaylist();
-  } else {
+  } else if (list_name == "COMA") {
+    track_list = COMA;
+    loadPlaylist();
+  }  else {
     track_list = placeholder;
     loadPlaylist();
   }

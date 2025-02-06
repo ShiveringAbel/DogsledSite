@@ -75,7 +75,8 @@ a {
             padding-top: 0;
             border: 15px solid transparent;
             box-sizing: border-box;
-            border-image: var(--border_image_url) var(--border_image_slice) round;
+            -o-border-image: var(--border_image_url) var(--border_image_slice) round;
+               border-image: var(--border_image_url) var(--border_image_slice) round;
             background-color: black;
         
         }
@@ -104,7 +105,8 @@ a {
     background-color: black;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
-    border-image: var(--border_image_url) var(--border_image_slice) round;
+    -o-border-image: var(--border_image_url) var(--border_image_slice) round;
+       border-image: var(--border_image_url) var(--border_image_slice) round;
 }
 
 #header {
@@ -114,7 +116,8 @@ a {
     justify-content: space-between;
     padding: 0 20px 10px;
     border-bottom: 15px solid transparent;
-    border-image: var(--border_image_url) var(--border_image_slice) round;
+    -o-border-image: var(--border_image_url) var(--border_image_slice) round;
+       border-image: var(--border_image_url) var(--border_image_slice) round;
 
 
         #titleBox {
@@ -214,7 +217,9 @@ a {
     width: auto;
     align-items: center;
 
-    border-image: var(--border_image_url) var(--border_image_slice) round;
+    -o-border-image: var(--border_image_url) var(--border_image_slice) round;
+
+       border-image: var(--border_image_url) var(--border_image_slice) round;
     border-image-outset: 9px;
 
   }
@@ -336,6 +341,19 @@ a {
 	color: white;
 	position: absolute;
 	top: -5dvh;
+}
+
+@-webkit-keyframes snowfall {
+    /* snowflake animation */
+    /* heavily reliant on javascript to inject generated CSS into each individual snowflake after page loads */
+	from {
+        /* starts at the top of the page, randomly generates an x value for the snowflakes horizontal start position */
+		transform: translate3d(var(--left-start), -1em, 0); 
+	}
+	to {
+        /* generates a random x value for the horizontal end position, drifts to new position at bottom */
+		transform: translate3d(var(--left-end), 110dvh, 0);
+	}
 }
 
 @keyframes snowfall {
