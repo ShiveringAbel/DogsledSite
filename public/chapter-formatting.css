@@ -2,49 +2,57 @@
 /* CSS TUTORIAL: https://www.w3schools.com/css/default.asp */
 /* CSS PROPERTIES COMPENDIUM: https://www.w3schools.com/cssref/index.php */
 
-#e-reader { /* constrains all formatting to elements within the e-reader element */
-    /* make sure that everything is inside this section */
-    font-family: 'Spectral', Georgia, serif;
+:root {
     /* prioritizes Spectral font; Georgia and Serif are websafe fallbacks */
-    i{ 
-        font-style: italic;
-    }
-
-    h3{ /* styles chapter titles */
-        /* removes bold effect */
-        font-weight: normal;
-        text-align: center;
-    }
-    ul{ /* styles lists within text */
-        /* (replaces bullet points with star symbol) */
-        list-style-type: '\0027E1';
-        text-indent: 0;
-    }
-    li{ /* individual list item styling */
-        /* (addes space between list elements & bullet points) */
-        padding-left: 0.5em;
-    }
-    .star-divider { /* styles dividers with class 'star-divider' */
-        /* adds top + bottom margin */
-        margin: 2.5em 0;
-        /* em = size unit relative to font size */
-    }
-
-    #art {
-        overflow: auto;
-        max-width: 610px;
-        text-indent: 0;
-        text-align: center;
-        margin: auto;
-        -webkit-box-sizing : border-box;
-        -moz-box-sizing : border-box;
-        box-sizing : border-box;
-        img {
-            width: auto;
-            height: auto;
-            max-width: 100%;
-        }
-    }
-    /* add more stuff here ! */
-
+    font-family: 'Spectral', Georgia, serif;
 }
+
+i {
+    font-style: italic;
+}
+
+h3 {
+    /* styles chapter titles */
+    /* removes bold effect */
+    font-weight: normal;
+    text-align: center;
+}
+
+ul {
+    /* styles lists within text */
+    /* (replaces bullet points with star symbol) */
+    list-style-type: '\0027E1';
+    text-indent: 0;
+}
+
+li {
+    /* individual list item styling */
+    /* (addes space between list elements & bullet points) */
+    padding-left: 0.5em;
+}
+
+.star-divider {
+    /* styles dividers with class 'star-divider' */
+    /* adds top + bottom margin */
+    margin: 2.5em 0;
+    /* em = size unit relative to font size */
+}
+
+#art {
+    overflow: auto;
+    max-width: 610px;
+    text-indent: 0;
+    text-align: center;
+    margin: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    img {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+    }
+}
+
+/* add more stuff here ! */
