@@ -39,7 +39,6 @@ li {
 }
 
 #art {
-    overflow: auto;
     max-width: 610px;
     text-indent: 0;
     text-align: center;
@@ -49,9 +48,8 @@ li {
     box-sizing: border-box;
 
     img {
-        width: auto;
         height: auto;
-        max-width: 100%;
+        width: 100%;
     }
 }
 
