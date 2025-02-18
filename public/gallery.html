@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dogsled</title>
+    <link href="gallerystyle.css" rel="stylesheet" type="text/css" media="all">
+    <script type="module" crossorigin src="galleryscript.js"></script>
+
+  </head>
+<body>
+<!-- popup stuff, hidden by default-->
+  <!-- loader -->
+  <div id="myModal2" class="modal2">
+
+    <div class="modal-content2">
+     <div class="loader"></div> 
+    </div>
+  </div>
+  
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+  
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <img id="output" src="#placeholder">
+        <div id="image_navigation">
+            <span id="left" onclick="left()">&laquo;</span>
+            <span style="min-width: 20px;"></span>
+            <span id="right" onclick="right()">&raquo;</span>
+        </div>
+    </div>
+  </div>
+<!-- end of popup stuff --> 
+
+<h1>Chapter Art</h1>
+    <ul class="gallery">
+        <!--basically just add lots of images-->
+        <li><img src="images\chapter1_2k.jpg" loading="lazy"></li>
+        <li><img src="images\chapter2_2k.jpg" loading="lazy"></li>
+        <li><img src="images\chapter3_2k.jpg" loading="lazy"></li>
+        <li><img src="images\chapter4_2k.jpg" loading="lazy"></li>
+        <li><img src="images\chapter5_2k.jpg" loading="lazy"></li>
+    </ul>
+    
+</body>
+</html>

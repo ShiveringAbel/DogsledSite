@@ -1,0 +1,228 @@
+:root {
+    background-color: grey;
+    background-image: linear-gradient(black, grey, lightgrey);
+           }
+     body {
+ display:block;
+    background-color: black;
+    color: white;
+    max-width: 60vw;
+    margin: auto;
+    padding: 0 3% 15px;
+     height: initial;
+     min-height: 100vh;
+  }
+.gallery {
+   display:flex;
+ flex-wrap:wrap;
+ justify-content: center;
+ align-items: center;
+   }
+   .gallery img {
+   max-height:18vh;
+ vertical-align: bottom;
+   object-fit: cover;
+   }
+a:link {
+ color: white;
+}
+a:visited {
+ color: white;
+}
+a:hover {
+ color: lightgrey;
+}
+.clearfix {
+ overflow: auto;
+}
+ hr.dashed {
+border-top: 2px dashed;
+border-bottom: none;
+}
+
+#left,#right {
+ font-size: 30px;
+ color: white;
+ text-decoration-line: underline;
+ cursor: pointer;
+}
+#left:hover,#right:hover {
+   opacity: 0.75;
+}
+#left:active,#right:active {
+   opacity: 0.4;
+}
+#fuck {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+ flex-direction: row;
+ overflow: auto;
+ margin: 0;
+ padding: 0;
+}
+.modal-content {
+ align-items: center;
+}
+ .buttons {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+ }
+
+ .Ibutton {
+   display: inline-block;
+   position: relative;
+   bottom: 10vh;
+   border: double;
+   padding: 5px;
+   margin: 15px 10px 10px;
+   margin-right: 1.5vw;
+ color: white;
+ text-decoration-line: underline;
+ }
+ .Ibutton:hover {
+   color: lightgrey;
+ }
+
+   .header {
+     text-align: left;
+     overflow: auto;
+   }
+   #title {
+     font-family: 'Britannic Bold', Georgia, serif;
+     font-size: 7vh;
+   }
+ hr.dashed {
+border-top: 2px dashed;
+border-bottom: none;
+}
+ h1 {
+   text-align: center;
+ }
+ /* The Modal (background) */
+.modal {
+ display: none; /* Hidden by default */
+ position: fixed; /* Stay in place */
+ z-index: 1; /* Sit on top */
+ left: 0;
+ top: 0;
+ width: 100%; /* Full width */
+ height: 100%; /* Full height */
+ overflow: auto; /* Enable scroll if needed */
+ background-color: rgb(0,0,0); /* Fallback color */
+ background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  display:flex;
+  flex-direction:column;
+ background-color: black;
+ margin: auto;
+ padding: 1px 12px 5px;
+ border: 1px solid #888;
+ width: auto;
+ align-items: center;
+}
+#output {
+ max-width: 90vw;
+ max-height: 90vh;
+}
+
+/* The Close Button */
+.close {
+ color: #aaaaaa;
+ float: right;
+ font-size: 28px;
+ font-weight: bold;
+ align-self: flex-end;
+}
+
+.close:hover,
+.close:focus {
+ color: #000;
+ text-decoration: none;
+ cursor: pointer;
+}
+img.gallery:hover img{
+ opacity: 0.7;
+}
+ ul {
+   list-style-type: none;
+   padding: 0;
+ }
+ li img:hover {
+   opacity: 0.8;
+ transition: opacity .2s;
+ }
+ li img:active {
+   opacity:0.6;
+ }
+.modal2 {
+ display: none; /* Hidden by default */
+ position: fixed; /* Stay in place */
+ z-index: 1; /* Sit on top */
+ left: 0;
+ top: 0;
+ width: 100%; /* Full width */
+ height: 100%; /* Full height */
+ overflow: auto; /* Enable scroll if needed */
+ background-color: rgb(0,0,0); /* Fallback color */
+ background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+ opacity: 90;
+}
+.modal-content2 {
+ background-color: black;
+ margin: auto;
+ padding: 10px;
+ border: 1px solid #888;
+ width: auto;
+}
+.loader {
+ border: 7px solid white;
+ border-radius: 50%;
+ border-top: 7px solid grey;
+ width: 5vh;
+ height: 5vh;
+ -webkit-animation: spin 2s linear infinite; /* Safari */
+ animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+ 0% { -webkit-transform: rotate(0deg); }
+ 100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+ 0% { transform: rotate(0deg); }
+ 100% { transform: rotate(360deg); }
+}
+
+    @media only screen and (max-width: 800px) {
+             body{
+        max-width: 100%;
+        padding:0;
+        margin:0;
+      }
+     img#output {
+       max-width: 75vw;
+       max-height: auto;
+     }
+     .Ibutton {
+        margin: 10px 10px;
+        position: relative;
+        right: 40vw;
+        bottom: 0;
+        text-align: center;
+      }
+      .header {
+     text-align: center;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+      }
+}
