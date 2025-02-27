@@ -1,0 +1,49 @@
+
+/* * * snow * * */
+
+
+#initial-snow {
+    /* positioning the snowflake html elements */
+    font-family: 'Times New Roman', serif; /* font affects appearance of snowflakes if using asterisks */
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+    z-index: -1;
+}
+
+#initial-snow > * {
+    /* some snowflake styling */
+	font-size: 10px;
+	color: white;
+	position: absolute;
+	top: -5dvh;
+}
+
+@-webkit-keyframes snowfall {
+    /* snowflake animation */
+    /* heavily reliant on javascript to inject generated CSS into each individual snowflake after page loads */
+	from {
+        /* starts at the top of the page, randomly generates an x value for the snowflakes horizontal start position */
+		transform: translate3d(var(--left-start), -1em, 0); 
+	}
+	to {
+        /* generates a random x value for the horizontal end position, drifts to new position at bottom */
+		transform: translate3d(var(--left-end), 110dvh, 0);
+	}
+}
+
+@keyframes snowfall {
+    /* snowflake animation */
+    /* heavily reliant on javascript to inject generated CSS into each individual snowflake after page loads */
+	from {
+        /* starts at the top of the page, randomly generates an x value for the snowflakes horizontal start position */
+		transform: translate3d(var(--left-start), -1em, 0); 
+	}
+	to {
+        /* generates a random x value for the horizontal end position, drifts to new position at bottom */
+		transform: translate3d(var(--left-end), 110dvh, 0);
+	}
+}

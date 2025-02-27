@@ -18,6 +18,8 @@
     <!-- * *   * * -->
 
     <link href="basicstyle.css" rel="stylesheet" type="text/css" media="all">
+    <!--import Spectral font from google fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Spectral' rel='stylesheet'>
     <style>
         
         :root {
@@ -31,6 +33,7 @@
             margin: 0 auto;
             background-color: transparent;
             align-items: center;
+            text-align: center;
             justify-content: center;
             flex-direction: column;
             overflow: hidden;
@@ -41,8 +44,19 @@
         .visible {
             display: block;
         }
-        #crown, #snow {
+        #crown, #snow, #butterfly {
             z-index: 2;
+        }
+        #butterfly p {
+            font-family: 'Spectral', Georgia, serif;
+            max-width: 600px;
+            text-align: left;
+            text-indent: 20px;
+            background-color: black;
+        }
+        #butterfly h2 {
+            font-weight: normal;
+            
         }
         a:visited {
             color: rgb(210, 226, 231);
@@ -52,8 +66,8 @@
 <body>
     <!--https://www.deviantart.com/crystalcrowned/art/Crown-Pixel-Peach-828731448-->
     <!--edit the pixel later to make the gems red LOL-->
-    Make the fatal mistake?
     <div id="crown" class="visible">
+        Make the fatal mistake?
         <h2>
             <a href=#>
                 <img src="images\crown.png">
@@ -61,10 +75,16 @@
         </h2>
     </div>
     
-    <div id="snow" class="hidden">
-        <h2>
-            <a href="ch1.html">u fucked up</a>
+    <div id="butterfly" class="hidden">
+            <p>There are currently thought to be eight white dwarf stars amongst the hundred star systems nearest the Sun. With no source of energy, these bodies have no hope of supporting themselves against eventual, gravitational collapse. Once devastatingly hot-blooded, the stars redden, crystallizing from the inside out, going colder, and colder, until they are as one with the temperature of the universe. The process is not unlike the course of a slow, terminal disease.</p>
+            <p>In recent, albeit post-apocalyptic times, it has been reconsidered the immediacy of these doomed stars’ complete bodily death, The black dwarf’s elusive and desirous corpse has yet to be discovered, as the current, known universe is still too young to have quantifiably witnessed the complete collapse of such a persistent astral body. While devoid of its own ability to heat itself beyond the slow exhaustion of its internal storage capacity, white dwarves are, however, still capable of sapping material energy from a companion. He can’t even feel it</p>
+            
+        <h2><a href="ch1.html">ཐི༏ཋྀ󠀮</a>
         </h2>
+    </div>
+
+    <div id="snow2" class="hidden">
+        <h2><a href="#">u fucked up</a></h2>
     </div>
     
     <div id="initial-snow">
