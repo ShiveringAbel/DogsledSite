@@ -8,6 +8,7 @@ var currentImg;
 var highResModal = document.getElementById("myModal");
 var loadingModal = document.getElementById("myModal2");
 var closeModal = document.getElementsByClassName("close")[0];
+var credit = document.getElementById("credit");
 var rightArrow = document.getElementById("right");
 var leftArrow = document.getElementById("left");
 
@@ -30,11 +31,28 @@ function fetchHighRes(imgURL, indexHR) {
   highResModal.style.display = "none";
   loadingModal.style.display = "flex";
 
+  if (imgSrcHD.includes("fanart")) {
+    getCredit(imgSrcHD)
+  }
+  else {
+    credit.innerHTML = `Artist: <a href=https://freezerprince.tumblr.com/>Freezerprince</a>`
+  }
+
   console.log("HD url: " + imgSrcHD);
   document.getElementById("output").src = imgSrcHD;
   document.getElementById("output").addEventListener("load", function (event) {
     displayModal();
   });
+}
+
+
+function getCredit(src_str) {
+  // will have to simplify this in the future 
+  const bwettyLink = "https://twitter.com/bettyywettyy"
+  if (src_str.includes("bwetty")) {
+    credit.innerHTML = `Artist: <a href=${bwettyLink}>Bettywetty</a>`
+  }
+
 }
 
 // displays modal when image loads

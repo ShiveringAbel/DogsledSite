@@ -11,6 +11,9 @@ body {
     font-family: Garamond, serif;
 }
     
+a {
+    color: white;
+}
 /* gallery stuff */
 .gallery {
     display: flex;
@@ -95,8 +98,14 @@ ul {
 .close {
     float: right;
     align-self: flex-end;
+    position:fixed;
    }
    
+/* artist credits */
+#credit {
+    padding: 1rem;
+}
+
 /* nav arrows */
 #left,#right,.close {
     font-size: 30px;
