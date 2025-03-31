@@ -1,7 +1,4 @@
-body {
-    background-color: black;
-    padding: 20px;
-}
+
 
 #error_msg {
     color: white;
@@ -13,6 +10,26 @@ body {
     .splash{
         color:#add8e6;
     }
+    
+    .comment_box {
+        color: black;
+        background-color: #e4f2f7;
+        box-sizing: border-box;
+    }
+
+    .message_header {
+        padding: 5px 10px;
+        background-color: #add8e6;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .message_body {
+        padding: 0 10px;
+        max-height: 20vh;
+        overflow: auto;
+    }
+
 }
 
 
@@ -21,25 +38,8 @@ body {
     display: flex;
     gap: 10px;
 }
-.comment_box {
-    color: black;
-    background-color: #e4f2f7;
-}
-
-.message_header {
-    padding: 5px 10px;
-    background-color: #add8e6;
-    display: flex;
-    justify-content: space-between;
-}
-
-.message_body {
-    padding: 0 10px;
-    max-height: 20vh;
-    overflow: auto;
-}
-
 .comment_form {
+    color: black;
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -71,5 +71,5 @@ body {
 textarea {
     box-sizing: border-box;
     width: 100%;
-    max-width: 100%;
+    max-width: min(55rem, 90dvw);
 }

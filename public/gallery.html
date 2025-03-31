@@ -1,53 +1,74 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dogsled</title>
-    <link href="gallerystyle.css" rel="stylesheet" type="text/css" media="all">
-    <script type="module" crossorigin src="galleryscript.js"></script>
 
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dogsled</title>
+  <link href="gallerystyle.css" rel="stylesheet" type="text/css" media="all">
+  <script type="module" crossorigin src="galleryscript.js"></script>
+  <script type="module" crossorigin src="snowfall.js"></script><!--style sheets-->
+  <link href="basicstyle.css" rel="stylesheet" type="text/css" media="all">
+  <style>
+    #huge-box {
+      padding: 0;
+    }
+  </style>
+  <script type="module">
+    import { letItSnow } from "./snowfall.js";
+    letItSnow();
+
+  </script>
+</head>
+
 <body>
-<!-- popup stuff, hidden by default-->
+  <!-- popup stuff, hidden by default-->
   <!-- loader -->
   <div id="myModal2" class="modal2">
 
     <div class="modal-content2">
-     <div class="loader"></div> 
+      <div class="loader"></div>
     </div>
   </div>
-  
+
   <!-- The Modal -->
   <div id="myModal" class="modal">
-  
+
     <!-- Modal content -->
     <div class="modal-content">
-        <span class="close">&times;</span>
-        <span id="credit">Artist: freezerprince</span>
-        <img id="output" src="#placeholder">
-        <div id="image_navigation">
-            <span id="left" onclick="left()">&laquo;</span>
-            <span style="min-width: 20px;"></span>
-            <span id="right" onclick="right()">&raquo;</span>
-        </div>
+      <span class="close">&times;</span>
+      <span id="credit">Artist: freezerprince</span>
+      <img id="output" src="#placeholder">
+      <div id="image_navigation">
+        <span id="left" onclick="left()">&laquo;</span>
+        <span style="min-width: 20px;"></span>
+        <span id="right" onclick="right()">&raquo;</span>
+      </div>
     </div>
   </div>
-<!-- end of popup stuff --> 
+  <!-- end of popup stuff -->
+  <div id="huge-box">
+    <h1>Chapter Art</h1>
+    <ul class="gallery">
+      <!--basically just add lots of images-->
+      <li><img src="images\chapter1_2k.jpg" loading="lazy"></li>
+      <li><img src="images\chapter2_2k.jpg" loading="lazy"></li>
+      <li><img src="images\chapter3_2k.jpg" loading="lazy"></li>
+      <li><img src="images\chapter4_2k.jpg" loading="lazy"></li>
+      <li><img src="images\chapter5_2k.jpg" loading="lazy"></li>
+    </ul>
 
-<h1>Chapter Art</h1>
+    <h1>Fanart</h1>
     <ul class="gallery">
-        <!--basically just add lots of images-->
-        <li><img src="images\chapter1_2k.jpg" loading="lazy"></li>
-        <li><img src="images\chapter2_2k.jpg" loading="lazy"></li>
-        <li><img src="images\chapter3_2k.jpg" loading="lazy"></li>
-        <li><img src="images\chapter4_2k.jpg" loading="lazy"></li>
-        <li><img src="images\chapter5_2k.jpg" loading="lazy"></li>
+      <li><img src="images/bwetty_fanart1.png" loading="lazy"></li>
     </ul>
-    
-  <h1>Fanart</h1>
-    <ul class="gallery">
-        <li><img src="images/bwetty_fanart1.png" loading="lazy"></li>
-    </ul>
+  </div>
+
+
+  <div id="initial-snow">
+    <!--javascript generates snowflakes here-->
+  </div>
+
 </body>
+
 </html>

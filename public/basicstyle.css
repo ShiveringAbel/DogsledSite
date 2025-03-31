@@ -186,6 +186,22 @@ a {
 
 
 
+                #huge-box {
+                    /* flexbox for standalone pages */
+                    text-align: center;
+                    padding: 0 10rem;
+                    max-width: 60rem;
+                    height: 100dvh;
+                    box-sizing: border-box;
+                    overflow: auto;
+                    display: flex;
+                    flex-direction: column;
+                    background-color: black;
+                    border-left: 15px solid transparent;
+                    border-right: 15px solid transparent;
+                    -o-border-image: var(--border_image_url) var(--border_image_slice) round;
+                    border-image: var(--border_image_url) var(--border_image_slice) round;
+                  }
 
 /* * font size popup * */
 
@@ -277,11 +293,17 @@ a {
         display: none;
     }
 
-    #main-box {
-        max-width: 100dvw;
+    #main-box, #huge-box {
+        width: 100dvw;
         border: none;
+        padding: 0  10px;
     }
 
+    #huge-box {
+        h1 {
+            font-size: max(5vw, 150%);
+        }
+    }
     
     #e-reader {
         /* contains chapter text */

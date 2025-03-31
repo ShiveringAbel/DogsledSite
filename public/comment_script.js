@@ -14,6 +14,27 @@ let divArr = [];
 let textArr = [];
 
 
+//~ * ~ * ~ * ~ date/time ~ * ~ * ~ * ~//
+
+    // Function to add a leading zero to single digit numbers
+    function addLeadingZero(number) {
+        return (number < 10 ? '0' : '') + number;
+    }
+
+    // Get the current date and time
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = addLeadingZero(now.getMonth() + 1); // Months are zero-indexed
+    const day = addLeadingZero(now.getDate());
+    const hours = addLeadingZero(now.getHours());
+    const minutes = addLeadingZero(now.getMinutes());
+
+    // Format the datetime string in the format required by datetime-local input
+    const currentDatetime = `${year}-${month}-${day}T${hours}:${minutes}`;
+
+    // Set the value of the datetime-local input to the current date and time
+    document.getElementById('datetime').value = currentDatetime;;
+
 //~ * ~ * ~ * ~ form response handling ~ * ~ * ~ * ~//
 
 bugForm.addEventListener("submit", (e) => {
@@ -76,6 +97,20 @@ function loadMessages(data) {
 function displayError(err_code) {
     document.getElementById("error_msg").style = "display: block;"
     if (err_code = 1) {
-        document.getElementById("error_msg").innerHTML = "The message wall has been temporarily disabled."
+        divArr[0] = document.createElement("div")
+        divArr[0].classList.add("comment_box")
+        textArr[0] = document.createTextNode("")
+        divArr[0].innerHTML = `
+            <div class=message_header>
+                <span class=display_name>ERROR_MSG</span>
+                <span class=buffer></span>
+                <span class=comment_date>${currentDatetime}</span>
+            </div>
+            <div class=message_body>
+                <p>The message wall has been temporarily disabled by the sitemaster.</p>
+            </div>
+        `
+        divArr[0].appendChild(textArr[0])
+        MSGBOARD.appendChild(divArr[0])
     }
 }

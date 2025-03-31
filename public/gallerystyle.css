@@ -4,12 +4,12 @@
 --border_image_slice: 35;
 }
 
-body {
+/*body {
     background-color: black;
     color: rgb(173, 216, 230);
     text-align: center;
     font-family: Garamond, serif;
-}
+}*/
     
 a {
     color: white;
@@ -181,3 +181,13 @@ ul {
     100% { transform: rotate(360deg); }
    }
    
+   @media only screen and (max-width: 800px) {
+    #huge-box {
+        max-width: 100dvw;
+        border: none;
+        padding: 0  10px;
+        h1 {
+            font-size: max(5vw, 150%);
+        }
+    }
+}
