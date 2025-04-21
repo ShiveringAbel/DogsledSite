@@ -25,11 +25,14 @@ crown.onclick = function() {
 function wearCrown() {
     console.log("Wearing Crown")
     crownClasses.replace("visible", "hidden")
-    snow2Classes.replace("hidden", "visible")
+    //snow2Classes.replace("hidden", "visible")
+    bflyClasses.replace("hidden", "visible")
     letItSnow();
 }
 
+/*
 snow2.onclick = function() {
     snow2Classes.replace("visible", "hidden")
     bflyClasses.replace("hidden", "visible")
 }
+    */
