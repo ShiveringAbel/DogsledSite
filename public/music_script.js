@@ -22,6 +22,7 @@ let isPlaying = false;
 let updateTimer;
 let track_list;
 
+
 // Create new audio element
 let curr_track = document.createElement('audio');
 
@@ -626,6 +627,11 @@ function seekUpdate() {
 }
 
 function loadSession() {
+  let width = screen.width; 
+  if (width <= 800) {
+    return; // prevent music from playing when controls are not visible
+    // not working ???
+  }
   setPlaylist(sessionPlaylist);
   loadPlaylist();
   track_index = Number(sessionTrack);

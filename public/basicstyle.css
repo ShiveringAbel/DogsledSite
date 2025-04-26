@@ -232,13 +232,27 @@ a {
     border: 15px solid transparent;
     width: auto;
     align-items: center;
+    overflow: auto;
+    max-height: 90dvh;
 
     -o-border-image: var(--border_image_url) var(--border_image_slice) round;
 
        border-image: var(--border_image_url) var(--border_image_slice) round;
     border-image-outset: 9px;
-
   }
+                .close{
+                    /* button that closes the popup */
+                    font-size: 200%;
+                    color: white;
+                    position: absolute;
+                    right: 0;
+                }
+        #offline{
+            text-align: center;
+            border-bottom: 1px dashed white;
+            padding-bottom: 15px;
+            width: 100%;
+        }
         #fontBox{
             /* box containing top half of popup (slider area)*/
             position: relative;
@@ -248,13 +262,6 @@ a {
             width: 100%;
             padding-bottom: 15px;
             
-                }
-                .close{
-                    /* button that closes the popup */
-                    font-size: 200%;
-                    color: white;
-                    position: absolute;
-                    right: 0;
                 }
                 #rangeOutput{
                     /* text that outputs the current font size */

@@ -163,3 +163,21 @@ i.fa-play-circle, i.fa-pause-circle, i.fa-step-forward, i.fa-step-backward {
   border-style: dashed;
   color: white;
 }
+
+.menu{
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .menu{
+    display: flex;
+    padding-top: 15px;
+    border-bottom: 1px dashed white;
+    padding-bottom: 15px;
+    width: 100%;
+    overflow: visible;
+  }
+  .playlist{
+    max-height: 10vh;
+  }
+}
