@@ -35,7 +35,7 @@ function fetchHighRes(imgURL, indexHR) {
     getCredit(imgSrcHD)
   }
   else {
-    credit.innerHTML = `Artist: <a href=https://freezerprince.tumblr.com/>Freezerprince</a>`
+    credit.innerHTML = `Artist: Pony`
   }
 
   console.log("HD url: " + imgSrcHD);

@@ -11,6 +11,7 @@ scrollbar-width: thin;
 
 body {
     /*background and text colors*/
+    cursor: url(key4.png), default;
     background-color: none;
     color: rgb(173, 216, 230);
     display: flex;
@@ -41,12 +42,17 @@ button {
     color: lightcyan;
     border-color: lightgray;
     box-sizing: border-box;
-    cursor: pointer;
+    cursor: url(key4.png), default;
+}
+
+button:hover {
+    color:lightblue;
 }
 
 a { 
     /* link colors */
     color: white;
+    cursor: url(key4.png), pointer;
 }
 
 
@@ -249,8 +255,9 @@ a {
                     /* button that closes the popup */
                     font-size: 200%;
                     color: white;
-                    position: absolute;
-                    right: 0;
+                    margin: 0;
+                    padding: 0;
+                    margin-right: -100%;
                 }
         #offline{
             text-align: center;
