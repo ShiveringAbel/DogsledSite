@@ -244,6 +244,227 @@ let DOGSLED = [
   },
 ]
 
+let enkrateia_cover = wk_cover
+
+let ENKRATEIA = [
+  {
+    name: "Avbrott Sex",
+    artist: "Lifelover",
+    image: enkrateia_cover,
+    path: "music/Enkrateia/Lifelover - Avbrott Sex.mp3"
+  },
+  {
+    name: "One Hundred Years",
+    artist: "Xiu Xiu",
+    image: enkrateia_cover,
+    path: "music/Enkrateia/Xiu Xiu - One Hundred Years (with Chelsea Wolfe).mp3"
+  },
+  {
+    name: "Meds",
+    artist: "Placebo",
+    image: enkrateia_cover,
+    path: "music/Enkrateia/Placebo - Meds (Feat.Alison Mosshart).mp3"
+  },
+  {
+    name: "Wild Wind",
+    artist: "VOWWS",
+    image: enkrateia_cover,
+    path: "music/Enkrateia/VOWWS - Wild Wind.mp3"
+  },
+  {
+    name: "No One",
+    artist: "Joydrop",
+    image: enkrateia_cover,
+    path: "music/Enkrateia/Joydrop - No One.mp3"
+  },
+  {
+    name: "God Is a Circle",
+    artist: "Yves Tumor",
+    image: enkrateia_cover,
+    path: "music/Enkrateia/Yves Tumor - God Is a Circle.mp3"
+  },
+  {
+    name: "Good Boy",
+    artist: "Patriarchy",
+    image: enkrateia_cover,
+    path: "music/Enkrateia/Patriarchy - Good Boy.mp3"
+  },
+  {
+    name: "Fantasy World",
+    artist: "Feline",
+    image: enkrateia_cover,
+    path: "music/Enkrateia/Feline - Fantasy World.mp3"
+  },
+  {
+    name: "Moral Centralia",
+    artist: "Harvey Danger",
+    image: enkrateia_cover,
+    path: "music/Enkrateia/Harvey Danger - Moral Centralia.mp3"
+  },
+  {
+    name: "Young Eucharists",
+    artist: "Parenthetical Girls",
+    image: enkrateia_cover,
+    path: "music/Enkrateia/Parenthetical Girls - Young Eucharists.mp3"
+  },
+  {
+    name: "Blind",
+    artist: "Placebo",
+    image: enkrateia_cover,
+    path: "music/Enkrateia/Placebo - Blind.mp3"
+  },
+  {
+    name: "Just You And Me",
+    artist: "The Birthday Party",
+    image: enkrateia_cover,
+    path: "music/Enkrateia/The Birthday Party - Just You And Me.mp3"
+  },
+  {
+    name: "F.t.w.",
+    artist: "Xiu Xiu",
+    image: enkrateia_cover,
+    path: "music/Enkrateia/Xiu Xiu - F.T.W..mp3"
+  },
+  {
+    name: "Cold",
+    artist: "The Cure",
+    image: enkrateia_cover,
+    path: "music/Enkrateia/The Cure - Cold.mp3"
+  },
+  {
+    name: "The Crawl",
+    artist: "Placebo",
+    image: enkrateia_cover,
+    path: "music/Enkrateia/Placebo - The Crawl.mp3"
+  },
+  {
+    name: "All is Full Of Love",
+    artist: "Björk",
+    image: enkrateia_cover,
+    path: "music/Enkrateia/Björk - All Is Full Of Love.mp3"
+  },
+  {
+    name: "Rope On FIre",
+    artist: "Morphine",
+    image: enkrateia_cover,
+    path: "music/Enkrateia/Morphine - Rope On Fire.mp3"
+  },
+  {
+    name: "Thorns",
+    artist: "Këkht Aräkh",
+    image: enkrateia_cover,
+    path: "music/Enkrateia/Këkht Aräkh - Thorns.mp3"
+  },
+  {
+    name: "Bright Dead Star",
+    artist: "Current 93",
+    image: enkrateia_cover,
+    path: "music/Enkrateia/Current 93 - Bright Dead Star.mp3"
+  },
+  {
+    name: "From Her to Eternity",
+    artist: "Nick Cave & The Bad Seeds",
+    image: enkrateia_cover,
+    path: "music/Enkrateia/Nick Cave and the Bad Seeds - From Her to Eternity (1987) (Bonus track).mp3"
+  },
+  {
+    name: "Killing for Company",
+    artist: "Swans",
+    image: enkrateia_cover,
+    path: "music/Enkrateia/Swans - Killing for Company.mp3"
+  },
+  {
+    name: "It's Your Life",
+    artist: "Milla Jovovich",
+    image: enkrateia_cover,
+    path: "music/Enkrateia/Milla Jovovich - It's Your Life.mp3"
+  },
+  {
+    name: "Fan Letter",
+    artist: "Michael Gira",
+    image: enkrateia_cover,
+    path: "music/Enkrateia/Michael Gira - Fan Letter.mp3"
+  },
+  {
+    name: "Malpractice",
+    artist: "Faith No More",
+    image: enkrateia_cover,
+    path: "music/Enkrateia/Faith No More - Malpractice.mp3"
+  },
+  {
+    name: "Starry Stairs",
+    artist: "Okkervil River",
+    image: enkrateia_cover,
+    path: "music/Enkrateia/Okkervil River - Starry Stairs.mp3"
+  },
+  {
+    name: "Hope In Suffering",
+    artist: "Yves Tumor",
+    image: enkrateia_cover,
+    path: "music/Enkrateia/Yves Tumor - Hope In Suffering (Escaping Oblivion & Overcoming Powerlessness) (feat. Oxhy & Puce Mary).mp3"
+  },
+  {
+    name: "Love",
+    artist: "Këkht Aräkh",
+    image: enkrateia_cover,
+    path: "music/Enkrateia/Këkht Aräkh - Love.mp3"
+  },
+  {
+    name: "Starblood",
+    artist: "Cranes",
+    image: enkrateia_cover,
+    path: "music/Enkrateia/Cranes - Starblood.mp3"
+  },
+  {
+    name: "The Teeth of the Winds of the Sea",
+    artist: "Current 93",
+    image: enkrateia_cover,
+    path: "music/Enkrateia/Current 93 - The Teeth Of The Winds Of The Sea.mp3"
+  },
+  {
+    name: "Second Face",
+    artist: "Saâda Bonaire",
+    image: enkrateia_cover,
+    path: "music/Enkrateia/Saâda Bonaire - Second Face.mp3"
+  },
+  {
+    name: "Spark",
+    artist: "Tori Amos",
+    image: enkrateia_cover,
+    path: "music/Enkrateia/Tori Amos - Spark.mp3"
+  },
+  {
+    name: "Just the Same But Brand New",
+    artist: "St. Vincent",
+    image: enkrateia_cover,
+    path: "music/Enkrateia/St. Vincent - Just the Same but Brand New.mp3"
+  },
+  {
+    name: "Messiah Ward",
+    artist: "Nick Cave & The Bad Seeds",
+    image: enkrateia_cover,
+    path: "music/Enkrateia/Nick Cave and the Bad Seeds - Messiah Ward.mp3"
+  },
+  {
+    name: "Piña, Coconut & Cherry",
+    artist: "Xiu Xiu",
+    image: enkrateia_cover,
+    path: "music/Enkrateia/Xiu Xiu - Piña, Coconut & Cherry.mp3"
+  },
+  {
+    name: "This Regrettable End",
+    artist: "Parenthetical Girls",
+    image: enkrateia_cover,
+    path: "music/Enkrateia/Parenthetical Girls - This regrettable end.mp3"
+  },
+  {
+    name: "Black Lake",
+    artist: "Björk",
+    image: enkrateia_cover,
+    path: "music/Enkrateia/Björk - Black Lake.mp3"
+  }
+]
+
 let coma_cover = betty_cover
 
 let COMA = [
@@ -333,7 +554,7 @@ let COMA = [
   },
   {
     name: "Hidden Place",
-    artist: "Bjork",
+    artist: "Björk",
     image: coma_cover,
     path: "music/Coma/Björk - Hidden Place.mp3"
   },
@@ -399,7 +620,7 @@ let COMA = [
   },
   {
     name: "The Gate",
-    artist: "Bjork",
+    artist: "Björk",
     image: coma_cover,
     path: "music/Coma/Björk - The Gate.mp3"
   },
@@ -435,7 +656,7 @@ let COMA = [
   },
   {
     name: "Joga",
-    artist: "Bjork",
+    artist: "Björk",
     image: coma_cover,
     path: "music/Coma/Björk - Joga.mp3"
   },
@@ -484,6 +705,9 @@ function setPlaylist(list_name) {
   } else if (list_name == "COMA") {
     track_list = COMA;
     loadPlaylist();
+  } else if (list_name == "ENKRATEIA") {
+    track_list = ENKRATEIA;
+    loadPlaylist();
   }  else {
     track_list = placeholder;
     loadPlaylist();
@@ -496,7 +720,7 @@ dogs.onclick = function() {
   setPlaylist("DOGSLED");
 }
 enkr.onclick = function() {
-  setPlaylist("ENRATEIA");
+  setPlaylist("ENKRATEIA");
 }
 coma.onclick = function() {
   setPlaylist("COMA");
