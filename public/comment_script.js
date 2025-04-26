@@ -3,7 +3,7 @@
 
 const API_LINK = 'https://sheetdb.io/api/v1/pzgyz1ngukw5u';
 // please make sure that this link is the same as the linked action in comments.html !!
-var disable_wall = true
+var disable_wall = false
 // boolean that disables visibility of the message wall for debugging purposes
 // (editing the site using a live preview with the message wall enabled will oveload the api)
 
