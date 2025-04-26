@@ -632,6 +632,7 @@ function loadSession() {
     return; // prevent music from playing when controls are not visible
     // not working ???
   }
+  else {
   setPlaylist(sessionPlaylist);
   loadPlaylist();
   track_index = Number(sessionTrack);
@@ -639,7 +640,7 @@ function loadSession() {
   curr_track.currentTime = sessionTime
   curr_track.volume = sessionVol
   volume_slider.value = sessionVol * 100;
-  playTrack();
+  playTrack();}
 }
 
 // Load the first track in the tracklist
