@@ -13,6 +13,9 @@
     #huge-box {
       padding: 0;
     }
+    #huge-box button{
+      margin-left: 0;
+    }
   </style>
   <script type="module">
     import { letItSnow } from "./snowfall.js";
@@ -20,7 +23,6 @@
 
   </script>
 </head>
-
 <body>
   <!-- popup stuff, hidden by default-->
   <!-- loader -->
@@ -48,6 +50,7 @@
   </div>
   <!-- end of popup stuff -->
   <div id="huge-box">
+    <button onclick="history.back()" style="margin-left: 20px;">Back</button>
     <h1>Chapter Art</h1>
     <ul class="gallery">
       <!--basically just add lots of images-->
